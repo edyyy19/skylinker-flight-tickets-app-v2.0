@@ -33,3 +33,5 @@ To use the SkyLinker application, follow these steps:
 - Open the project in a code editor.
 - Run the application on a local server to view the flight booking interface.
 - Browse available flights, add them to the cart, and proceed to checkout for booking.
+
+- SkyLinker: https://skylinker.netlify.app/
