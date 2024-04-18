@@ -308,7 +308,6 @@ const pageTwo = () => {
           cartTickets[ticketIndex].quantity =
             cartTickets[ticketIndex].quantity + 1;
         }
-        console.log('after', cartTickets);
       };
       addToCartButton.addEventListener('click', () => {
         const ticketData = {
@@ -845,7 +844,6 @@ const pageFour = () => {
       phoneNumber: phoneNumberInput,
     };
     infodata.push(travellerData);
-    console.log(infodata);
   };
 
   const btn = document.querySelector('.proceed-to-pay');
@@ -1077,7 +1075,6 @@ const pageFivePayment = () => {
     };
 
     paymentDataInfo.push(paymentData);
-    console.log(paymentDataInfo);
   };
   // Cart total
   const payAmount = document.querySelector('.pay-button');
