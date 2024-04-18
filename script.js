@@ -574,6 +574,7 @@ const pageThree = () => {
       ticketsCheckoutContainer.appendChild(ticketCardCheckout);
     });
   };
+
   createCheckoutTicketCards();
   // Going back to Page 2 Event Listener
   const pageTwoButton = document.querySelector('.fa-suitcase');
