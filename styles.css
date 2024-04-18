@@ -1,0 +1,1219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: lightgray;
+}
+
+:root {
+  --dark-purle: #7161ef;
+  --mediumdark-purple: #957fef;
+  --light-purple: #b79ced;
+  --lightest-purple: #dec0f1;
+  --white: #ffffff;
+  --dirty-white: #f5f6fb;
+  --black: #000000;
+  --light-gray: lightgray;
+  --light-gray2: #e0e0e049;
+  --gray: gray;
+}
+
+.body-preview {
+  width: 372px;
+  height: 700px;
+  background-color: var(--mediumdark-purple);
+  margin: 12px auto;
+  border-radius: 14px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.164);
+  overflow: hidden;
+}
+/* =============== WELCOME PAGE ===============*/
+
+/* ===== Upper Bar (hour,wifi,battery) */
+.time-and-battery-details-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mediumdark-purple);
+  align-items: center;
+  width: 372px;
+  height: 32px;
+  padding: 20px;
+  border-radius: 14px 14px 0 0;
+}
+.time-hour {
+  color: var(--white);
+  font-weight: 500;
+}
+.battery-and-wifi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 60px;
+}
+.wifi {
+  color: var(--white);
+}
+.battery-outer {
+  width: 28px;
+  height: 14px;
+  border: 1px solid white;
+  border-radius: 5px;
+  position: relative;
+  padding: 1px;
+}
+.battery-outer::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  width: 3px;
+  height: 5px;
+  background-color: var(--white);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.battery-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 3px;
+}
+/* Upper Bar (hour,wifi,battery) ===== */
+
+/* ===== Main Object */
+.main-object-container {
+  width: 90%;
+  height: 80%;
+  /* background-color: violet; */
+  margin: 20px auto 0;
+}
+.main-object-character {
+  width: 100%;
+  height: 75%;
+  /* background-color: blue; */
+  background-image: url(https://i.ibb.co/7Wb7pdp/caracter.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: drop-shadow(8px 10px 8px rgba(0, 0, 0, 0.233));
+}
+.main-object-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  padding: 20px;
+}
+.main-object-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+/* Main Object ===== */
+
+/* ===== Button (Next Page) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 10%;
+  /* background-color: black; */
+  margin: 0 auto;
+}
+.button-next-page {
+  outline: none;
+  border: none;
+  background-color: var(--white);
+  color: var(--mediumdark-purple);
+  padding: 10px 90px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 99;
+}
+.button-next-page:hover {
+  background-color: var(--dark-purle);
+  color: var(--white);
+  transition: 0.23s;
+}
+
+/* ========= PAGE 2 ================ PAGE 2 ================= PAGE 2 ========== */
+/* Upper Phone Details (hour,wifi,battery) ===== */
+
+/* ===== Under Phone Details Bar */
+.under-phone-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: var(--mediumdark-purple);
+}
+.under-phone-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+/* Under Phone Details Bar ===== */
+
+.scrollbar {
+  height: calc(100% - 40px - 32px);
+  /* background-color: blue; */
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+/* ===== Navigation Bar */
+.navbar-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background-color: var(--white);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.164);
+  z-index: 99;
+}
+.navbar-container .main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 54px;
+}
+.main-menu-button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--gray);
+}
+.main-menu-active {
+  color: var(--dark-purle);
+}
+/* Navigation Bar ===== */
+
+/* ===== Header Elements Page 2 */
+.header-elements-container {
+  width: 100%;
+  height: 45%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(217, 209, 249, 0.5970763305322129) 15%,
+    rgba(205, 195, 247, 0.9051995798319328) 32%,
+    rgba(178, 162, 243, 0.938813025210084) 44%,
+    rgba(160, 140, 241, 0.9304096638655462) 55%,
+    rgba(149, 127, 239, 1) 74%
+  );
+}
+
+.header-elements-image {
+  width: 100%;
+  height: 100%;
+  /* background-color: orange; */
+  background-image: url(https://i.ibb.co/8sTJNYq/plane.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-align: center;
+  padding: 22px 22px 0;
+}
+.header-elements-title {
+  font-size: 36px;
+  font-weight: 200;
+  color: var(--white);
+}
+/* Header Elements Page 2 ===== */
+
+/* ===== Search Bar */
+.search-bar-container {
+  width: 100%;
+  height: 38px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0 10px;
+  margin-top: 168px;
+}
+.search-bar-icon {
+  width: 10%;
+  font-size: 18px;
+}
+.search-bar {
+  outline: none;
+  border: none;
+  width: 90%;
+  height: 100%;
+}
+.search-bar::placeholder {
+  padding: 5px;
+  color: var(--light-gray);
+}
+/* Search Bar ===== */
+
+/* ===== Tickets Page 2 */
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  /* height: 1000px; */
+  /* background-color: blue; */
+  padding: 20px 0 60px;
+}
+
+.ticket-preview {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 82px;
+  background-color: var(--white);
+  margin: 0 auto;
+  border-radius: 8px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.tickets-company-image {
+  width: 16%;
+  height: 60%;
+  /* background-color: #b79ced; */
+  background-image: url(https://logos-world.net/wp-content/uploads/2023/01/IndiGo-Logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+/* Design Elements */
+.ticket-card-design-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 5%;
+  height: 100%;
+  /* background-color: greenyellow; */
+}
+
+.dot {
+  width: 100%;
+  height: 10px;
+  background-color: var(--dirty-white);
+  border-radius: 0 0 10px 10px;
+}
+.dot:nth-child(2) {
+  border-radius: 10px 10px 0 0;
+}
+
+/* Flight Details */
+.flight-details-container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 16% - 5px - 5%);
+  height: 100%;
+  padding: 8px 0;
+  /* background-color: #957fef; */
+}
+
+.flight-company-name-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  /* background-color: aquamarine; */
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* Flight Boarding Details */
+.flight-boarding-details {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 30px);
+  /* background-color: violet; */
+  padding-left: 10px;
+}
+
+.flight-hour-airport {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  /* background-color: #7161ef; */
+  font-size: 12px;
+}
+.flight-hour-airport:nth-child(3) {
+  align-items: end;
+}
+.flight-hour {
+  font-weight: 600;
+}
+.flight-airport {
+  color: var(--gray);
+}
+
+/* Flight Duration */
+.flight-duration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 100%;
+  /* background-color: blanchedalmond; */
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 8px;
+  color: var(--gray);
+}
+
+.flight-duration-design-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100%;
+}
+
+.circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--dark-purle);
+  border-radius: 50%;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-purle);
+}
+
+/* Flight Price */
+.flight-price-container {
+  display: flex;
+  justify-content: end;
+  width: calc(100% - 35% - 15% - 15% - 16px);
+  height: 100%;
+  /* background-color: blue; */
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.flight-price {
+  margin-top: 3px;
+}
+
+.ticket-add-to-cart {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 90%;
+  height: 50px;
+  background-color: var(--mediumdark-purple);
+  margin: -10px auto;
+  border-radius: 0 0 8px 8px;
+  z-index: 99;
+  margin-bottom: 2px;
+}
+
+.button-add-to-cart {
+  outline: none;
+  border: none;
+  background-color: var(--white);
+  padding: 5px 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: var(--dark-purle);
+  cursor: pointer;
+  margin-bottom: 7px;
+}
+.button-add-to-cart:hover {
+  background-color: var(--dark-purle);
+  color: var(--white);
+  transition: 0.2s;
+}
+.ticket-add-to-cart-margintop {
+  background-color: white;
+  height: 10px;
+  width: 100%;
+}
+
+.add-to-cart-active {
+  display: flex;
+}
+
+/* ============== PAGE 3 ============ PAGE 3 ============= PAGE 3 ============ */
+/* ===== Checkout */
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: blue; */
+  /* height: 10000px; */
+  padding: 0 0 60px;
+  margin-bottom: 50px;
+}
+.checkout-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.041);
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+}
+
+/* Tickets Checkout Preview */
+.tickets-checkout-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: red; */
+  margin-top: 20px;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+
+.ticket-chekout-preview {
+  display: flex;
+  width: 100%;
+  height: 140px;
+  /* background-color: violet; */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.ticket-checkoout-company-logo {
+  width: 25%;
+  height: 100%;
+  /* background-color: blue; */
+}
+.logo {
+  width: 90%;
+  height: 40%;
+  /* background-color: grey; */
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-kazlLDfKtuMKHtLvOOfepOL_AuLcQ6ZK13i928x2tg&s);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  margin: 4px 0;
+}
+.tickets-checkout-quantity-per-ticket {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dark-purle);
+  margin-left: 11px;
+}
+.flight-checkout-details-container {
+  width: 75%;
+  height: 100%;
+  /* background-color: #b79ced; */
+}
+.flight-checkout-company-name-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  /* background-color: aquamarine; */
+  font-size: 13px;
+  font-weight: 600;
+}
+.flight-checkout-boarding-details {
+  width: 100%;
+  height: 75%;
+  /* background-color: wheat; */
+}
+.flight-checkout-leave-arrival {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 45%;
+  /* background-color: #957fef; */
+}
+.flight-checkout-hour-airport {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 13px;
+  /* background-color: #dec0f1; */
+  height: 100%;
+}
+.flight-checkout-hour {
+  font-weight: 600;
+}
+.flight-checkout-country {
+  color: var(--gray);
+  font-weight: 500;
+}
+
+/* Flight Checkout Duration */
+.flight-checkout-duration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  /* background-color: blanchedalmond; */
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 8px;
+  color: var(--gray);
+}
+.flight-checkout-duration-design-elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  width: 100%;
+}
+
+.circle-checkout {
+  width: 6px;
+  height: 6px;
+  background-color: var(--dark-purle);
+  border-radius: 50%;
+}
+
+.line-checkout {
+  width: 100%;
+  height: 2px;
+  background-color: var(--dark-purle);
+}
+
+/* Flight Date Boarding/Arrival */
+.flight-checkout-date-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  /* background-color: rgb(223, 255, 134); */
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+}
+.flight-checkout-airport {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  height: calc(100% - 25% - 45%);
+  /* background-color: rgb(245, 191, 152); */
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray);
+  padding-top: 5px;
+}
+.flight-checkout-airport span {
+  width: 130px;
+}
+.flight-checkout-airport-arrival {
+  display: flex;
+  justify-content: end;
+}
+
+/* Refundable */
+.refundable-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 15px;
+  /* background-color: red; */
+}
+.refundable-title {
+  font-size: 18px;
+  font-weight: 550;
+  margin-bottom: 5px;
+}
+.refundable-documentation {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--dark-purle);
+}
+.refundable-description {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(194, 194, 194);
+}
+/* Checkout ===== */
+
+/* ===== Checkout pay */
+.checkout-pay-container {
+  position: sticky;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--mediumdark-purple);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.123);
+  z-index: 98;
+  color: var(--white);
+  padding: 0 20px;
+}
+.checkout-quantity-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 400;
+}
+.checkout-quantity {
+  font-size: 15px;
+  font-weight: 500;
+}
+.checkout-total-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  font-weight: 400;
+}
+.checkout-total {
+  font-size: 15px;
+  font-weight: 500;
+}
+.buy-tickets {
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== Proceed To Pay */
+.proceed-to-pay-container {
+  position: sticky;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--mediumdark-purple);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.123);
+  z-index: 98;
+  color: var(--white);
+  padding: 0 20px;
+}
+.proceed-to-pay {
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+}
+/* Proced To Pay ===== */
+
+/* ===== Traveller Information */
+.traveller-info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: blue; */
+  /* height: 10000px; */
+  padding: 0 0 60px;
+  margin-bottom: 50px;
+}
+
+.traveller-info-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.041);
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
+  margin-bottom: 26px;
+}
+
+.traveller-note-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: red; */
+  font-size: 20px;
+  font-weight: 600;
+}
+.traveller-note-title {
+  margin-left: 20px;
+  margin-bottom: 4px;
+}
+
+.traveller-note-description {
+  width: 100%;
+  font-size: 13px;
+  color: var(--gray);
+  background-color: var(--light-gray2);
+  padding: 12px 20px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+/* Traveller Personal Information */
+.traveller-personal-information-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 900px; */
+  /* background-color: aquamarine; */
+  margin: 20px 0 10px;
+  padding: 0 20px;
+}
+
+.traveller-personal-information-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-info-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+.traveller-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.traveller-contact-info .text2 {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mediumdark-purple);
+  margin: 4px 0 2px;
+}
+
+.inputs {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  background-color: var(--light-gray2);
+  color: var(--gray);
+  border-radius: 10px;
+}
+.inputs::placeholder {
+  font-size: 12px;
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.traveller-contact-info {
+  margin-top: 22px;
+}
+
+.traveller-agree-with-terms {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  gap: 6px;
+  /* background-color: red; */
+  margin-top: 6px;
+}
+.agree-checkbox {
+  width: 18px;
+  height: 18px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  accent-color: var(--mediumdark-purple);
+}
+
+/* Go Back Icon */
+.under-phone-go-back {
+  position: absolute;
+  left: 18px;
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+}
+/* Notification */
+
+.notification-container {
+  position: relative;
+}
+.notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  left: 37px;
+  width: 300px;
+  height: 50px;
+  background-color: var(--mediumdark-purple);
+  border-radius: 15px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  transform: translateY(-1000%);
+  transition: 0.23s;
+  z-index: 99;
+}
+
+/* ============== PAGE 5 ============ PAGE 5 ============= PAGE 5 ============ */
+/* ===== Proceed To Pay */
+.pay-button-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--mediumdark-purple);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.123);
+  z-index: 98;
+  color: var(--white);
+  padding: 0 20px;
+}
+.pay-button {
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+}
+/* Proced To Pay ===== */
+
+/* ===== Paying Information */
+.payment-information-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: blue; */
+  /* height: 10000px; */
+  padding: 0 0 60px;
+  margin-bottom: 50px;
+}
+
+.payment-information-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+  background-color: var(--white);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.041);
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+.payment-option-text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--light-gray2);
+  font-size: 20px;
+  font-weight: 600;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Payment Personal Information */
+.payment-personal-information-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* height: 900px; */
+  /* background-color: aquamarine; */
+  margin: 25px 0 10px;
+  padding: 0 20px;
+}
+.payment-personal-details-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+.payment-personal-details-text .payment-text-subtitle,
+.subtitle-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--mediumdark-purple);
+}
+.subtitle-text-terms {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--mediumdark-purple);
+  margin-top: 20px;
+  text-align: center;
+}
+.subtitle-text-terms a {
+  color: var(--dark-purle);
+  font-weight: 600;
+}
+/* Payment Method */
+.payment-method {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-bottom: 8px;
+}
+.payment-method .option {
+  background-color: var(--white);
+  height: 75%;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 6px;
+  cursor: pointer;
+  /* padding: 0 10px; */
+  border: 2px solid var(--light-gray);
+  transition: all 0.3s ease;
+}
+.payment-method .option .dot {
+  top: -1px;
+  display: flex;
+  height: 15px;
+  width: 15px;
+  background-color: var(--light-gray2);
+  border-radius: 50%;
+  position: relative;
+  /* background-color: red; */
+}
+.payment-method .option .dot::before {
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 1px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--dark-purle);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type='radio'] {
+  display: none;
+}
+#credit-card:checked:checked ~ .option-1,
+#paypal:checked:checked ~ .option-2 {
+  border-color: var(--mediumdark-purple);
+  /* background: #0069d9; */
+}
+#credit-card:checked:checked ~ .option-1 .dot,
+#paypal:checked:checked ~ .option-2 .dot {
+  background: #fff;
+}
+#credit-card:checked:checked ~ .option-1 .dot::before,
+#paypal:checked:checked ~ .option-2 .dot::before {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(-3.2px);
+}
+.payment-method .option .credit-card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mediumdark-purple);
+}
+
+.paypal-image {
+  width: 60%;
+  height: 70%;
+  /* background-color: red; */
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/800px-PayPal.svg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.fa-credit-card {
+  font-size: 20px;
+}
+
+/* inputs */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.payment-expire-date-cvc {
+  display: flex;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.inputs-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.input-card-number {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  background-color: var(--light-gray2);
+  color: var(--gray);
+  border-radius: 10px;
+}
+
+.month-and-day-container {
+  display: flex;
+  gap: 12px;
+}
+
+.input-month-day-cvc {
+  width: 100px;
+  padding: 12px 10px;
+  outline: none;
+  border: none;
+  background-color: var(--light-gray2);
+  color: var(--gray);
+  border-radius: 10px;
+}
+
+.bottom-line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(221, 221, 221);
+}
+
+/* ============== PAGE 6 ============ PAGE 6 ============= PAGE 6 ============ */
+.message-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: calc(100% - 40px - 32px);
+  /* background-color: blue; */
+}
+
+.message-image {
+  width: 75%;
+  height: 50%;
+  background-image: url(https://i.ibb.co/s5c8N5b/checkmark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  /* background-color: red; */
+  margin-top: 30px;
+}
+
+.message-thank-you {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.message-description {
+  font-size: 16px;
+  font-weight: 600;
+}
+.message-description:nth-child(odd) {
+  margin-bottom: 2px;
+}
+
+.homepage-button-container {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background-color: var(--mediumdark-purple);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.123);
+  z-index: 98;
+  color: var(--white);
+  padding: 0 20px;
+}
+.homepage-button {
+  font-size: 14px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 15px;
+}
