@@ -215,10 +215,10 @@ const pageTwo = () => {
   bodyPreview.style.backgroundColor = 'var(--dirty-white)';
   const ticketsContainer = document.querySelector('.tickets-container');
 
-  const createTicketCards = () => {
-    const tickets = ticketCardsInfo;
+  const createTicketCards = (ticketList) => {
+    ticketsContainer.innerHTML = '';
 
-    tickets.forEach((ticket) => {
+    ticketList.forEach((ticket) => {
       const ticketCard = document.createElement('div');
       ticketCard.classList.add('ticket-card');
 
@@ -309,6 +309,7 @@ const pageTwo = () => {
             cartTickets[ticketIndex].quantity + 1;
         }
       };
+
       addToCartButton.addEventListener('click', () => {
         const ticketData = {
           id: ticket.id,
@@ -332,7 +333,29 @@ const pageTwo = () => {
     });
   };
 
-  createTicketCards();
+  // Search wanted ticket
+  const searchTicketName = (name) => {
+    const searchedTicket = ticketCardsInfo.filter((ticket) =>
+      ticket.flightName.toLowerCase().includes(name.toLowerCase())
+    );
+
+    if (searchedTicket.length > 0) {
+      createTicketCards(searchedTicket);
+    } else {
+      ticketsContainer.innerHTML =
+        '<span class="no-tickets-found">No tickets found</span>';
+    }
+  };
+
+  const searchInput = document.querySelector('.search-bar');
+
+  searchInput.addEventListener('input', (event) => {
+    const searchedName = event.target.value;
+    searchTicketName(searchedName);
+  });
+
+  createTicketCards(ticketCardsInfo);
+
   // Display Add To Cart Button
   const ticketCardsContainer = document.querySelector('.tickets-container');
 
